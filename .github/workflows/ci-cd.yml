@@ -92,6 +92,8 @@ jobs:
 
       - name: Upload & Deploy via SSH
         uses: appleboy/ssh-action@v1.0.0
+        env:
+          DOCKER_IMAGE: ${{ secrets.DOCKERHUB_USERNAME }}/${{ matrix.service }}:latest
         with:
           host: ${{ secrets.GCP_VM_HOST }}
           username: ${{ secrets.GCP_VM_USER }}
