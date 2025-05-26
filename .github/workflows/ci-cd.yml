@@ -98,6 +98,7 @@ jobs:
           host: ${{ secrets.GCP_VM_HOST }}
           username: ${{ secrets.GCP_VM_USER }}
           key: ${{ secrets.GCP_SSH_PRIVATE_KEY }}
+          envs: DOCKER_IMAGE
           script: |
             cat > /tmp/deploy.sh <<'EOF'
             ${{ steps.read_script.outputs.SCRIPT_CONTENT }}
