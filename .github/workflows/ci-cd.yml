@@ -100,11 +100,8 @@ jobs:
           key: ${{ secrets.GCP_SSH_PRIVATE_KEY }}
           envs: DOCKER_IMAGE
           script: |
-            echo "===== SCRIPT RECEIVED ====="
-            echo '${{ steps.read_script.outputs.SCRIPT_CONTENT }}'
-            echo "==========================="
-            cat > /tmp/deploy.sh <<'EOF'
+            cat >/tmp/deploy-${{ matrix.service }}.sh <<'EOF'
             ${{ steps.read_script.outputs.SCRIPT_CONTENT }}
             EOF
-            chmod +x /tmp/deploy.sh
-            bash /tmp/deploy.sh
+            chmod +x /tmp/deploy-${{ matrix.service }}.sh
+            bash /tmp/deploy-${{ matrix.service }}.sh
