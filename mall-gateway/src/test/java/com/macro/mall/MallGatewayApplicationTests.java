@@ -10,7 +10,7 @@ public class MallGatewayApplicationTests {
 
     @Test
     public void contextLoads() {
-        assertTrue(true, "------------hello");
+        assertTrue(false, "------------hello");
     }
 
 }
