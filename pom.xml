@@ -31,7 +31,6 @@
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-        <skipTests>true</skipTests>
         <java.version>17</java.version>
         <spring-boot.version>3.2.2</spring-boot.version>
         <spring-cloud.version>2023.0.1</spring-cloud.version>
